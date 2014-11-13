@@ -10,7 +10,7 @@
 #define __SqueakEngine__Convoluter__
 
 #include <stdio.h>
-#include "chuck_fft.h"
+
 
 class Convoluter {
     //instance variables here
@@ -20,6 +20,9 @@ public:
     //convolveSourceWithSpace(float* source, float* space)
     //returns float* time-domain
     float* convolveSourceWithSpace(float* source, float* response);
+    
+private:
+    unsigned long next_power_2(unsigned long n);
 };
 
 
