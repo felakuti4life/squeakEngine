@@ -12,11 +12,13 @@
 #include <stdio.h>
 #include "x-vector3d.h"
 class Room {
+    //impulse in frequency samples
     float* impulse;
+    
     Vector3D* color;
     
 public:
-    <#member functions#>
+    //TODO: init functions
 };
 
 #endif /* defined(__SqueakEngine__Room__) */
