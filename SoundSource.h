@@ -10,5 +10,16 @@
 #define __SqueakEngine__SoundSource__
 
 #include <stdio.h>
+#include "x-vector3d.h"
+
+class SoundSource {
+    float* source;
+     Vector3D* visualDimensions;
+    
+public:
+    //TODO:
+    float* getSound();
+    
+};
 
 #endif /* defined(__SqueakEngine__SoundSource__) */
