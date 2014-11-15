@@ -70,8 +70,8 @@
 		AAD2FFA51A141B4D002C6B76 /* libSqueakEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSqueakEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD2FFAC1A141B89002C6B76 /* Convoluter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Convoluter.cpp; sourceTree = "<group>"; };
 		AAD2FFAD1A141B89002C6B76 /* Convoluter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Convoluter.h; sourceTree = "<group>"; };
-		AAD2FFB01A141BF0002C6B76 /* chuck_fft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = chuck_fft.c; path = ../../visualizer/chuck_fft.c; sourceTree = "<group>"; };
-		AAD2FFB11A141BF0002C6B76 /* chuck_fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chuck_fft.h; path = ../../visualizer/chuck_fft.h; sourceTree = "<group>"; };
+		AAD2FFB01A141BF0002C6B76 /* chuck_fft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chuck_fft.c; sourceTree = "<group>"; };
+		AAD2FFB11A141BF0002C6B76 /* chuck_fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chuck_fft.h; sourceTree = "<group>"; };
 		AAD2FFB41A141F45002C6B76 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Room.cpp; sourceTree = "<group>"; };
 		AAD2FFB51A141F45002C6B76 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
 		AAD2FFB81A141F53002C6B76 /* SoundSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundSource.cpp; sourceTree = "<group>"; };
@@ -484,6 +484,7 @@
 				AAD2FFAB1A141B4D002C6B76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D4A582B0-68C5-4374-BEFD-7FF4B144F354</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SqueakEngine</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>551703DCECF1BB78BA8A6BD1ECC162BF39477823</key>
+		<string>github.com:felakuti4life/squeakEngine.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SqueakEngine.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>551703DCECF1BB78BA8A6BD1ECC162BF39477823</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:felakuti4life/squeakEngine.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>551703DCECF1BB78BA8A6BD1ECC162BF39477823</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>551703DCECF1BB78BA8A6BD1ECC162BF39477823</string>
+			<key>IDESourceControlWCCName</key>
+			<string>squeakEngine</string>
+		</dict>
+	</array>
+</dict>
+</plist>
