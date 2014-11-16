@@ -19,7 +19,7 @@ using namespace std;
 #define MAX(a,b) (a > b ? a : b)
 #define MIN(a,b) (a < b ? a : b)
 
-unsigned long Convoluter::next_power_2( unsigned long n )
+unsigned long next_power_2( unsigned long n )
 {
     unsigned long nn = n;
     for( ; n &= n-1; nn = n );
@@ -30,7 +30,7 @@ void convolve_fft( SAMPLE * f, int fsize, SAMPLE * g, int gsize, SAMPLE * buffy,
 {
     // sanity check
     //FIXME: where does assert live?
-    assert((fsize + gsize - 1) == size);
+    //assert((fsize + gsize - 1) == size);
     
     // make buffers to hold kernel and signal
     unsigned int fftsize = next_power_2( fsize + gsize - 1 );
@@ -76,5 +76,9 @@ void convolve_fft( SAMPLE * f, int fsize, SAMPLE * g, int gsize, SAMPLE * buffy,
 }
 
 float* Convoluter::convolveSourceWithSpace(float *source, float *response){
+    int floatsize = sizeof(float);
+    int fsize = sizeof(source)/floatsize;
+    int gsize = sizeof(response)/floatsize;
+    int size = fsize + gsize;
     
 }
