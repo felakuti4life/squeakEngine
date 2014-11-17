@@ -129,7 +129,7 @@ public:
     // load texture (call this with a texture bound)
     static bool loadTexture( const std::string & name, XTexture * data = NULL );
     // load texture from a UIImage
-    static bool loadTexture( CGImageRef image );
+    //static bool loadTexture( CGImageRef image );
     
     // draw texture
     static void drawTexture( const XTexture * image );
