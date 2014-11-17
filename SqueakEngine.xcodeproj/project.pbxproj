@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0060AE1A19558C0023691A /* AudioFileHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA0060AC1A19558C0023691A /* AudioFileHandler.cpp */; };
+		AA0060AF1A19558C0023691A /* AudioFileHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060AD1A19558C0023691A /* AudioFileHandler.h */; };
 		AAD200001A142A11002C6B76 /* x-buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFCE1A142A11002C6B76 /* x-buffer.h */; };
 		AAD200011A142A11002C6B76 /* x-def.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFCF1A142A11002C6B76 /* x-def.h */; };
 		AAD200021A142A11002C6B76 /* x-fun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFD01A142A11002C6B76 /* x-fun.cpp */; };
@@ -67,6 +69,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA0060AC1A19558C0023691A /* AudioFileHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioFileHandler.cpp; sourceTree = "<group>"; };
+		AA0060AD1A19558C0023691A /* AudioFileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileHandler.h; sourceTree = "<group>"; };
 		AAD2FFA51A141B4D002C6B76 /* libSqueakEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSqueakEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD2FFAC1A141B89002C6B76 /* Convoluter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Convoluter.cpp; sourceTree = "<group>"; };
 		AAD2FFAD1A141B89002C6B76 /* Convoluter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Convoluter.h; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				AAD2FFB01A141BF0002C6B76 /* chuck_fft.c */,
 				AAD2FFAD1A141B89002C6B76 /* Convoluter.h */,
 				AAD2FFAC1A141B89002C6B76 /* Convoluter.cpp */,
+				AA0060AC1A19558C0023691A /* AudioFileHandler.cpp */,
+				AA0060AD1A19558C0023691A /* AudioFileHandler.h */,
 				AAD2FFB51A141F45002C6B76 /* Room.h */,
 				AAD2FFB41A141F45002C6B76 /* Room.cpp */,
 				AAD2FFBC1A142A11002C6B76 /* rtaudio */,
@@ -253,6 +259,7 @@
 				AAD2FFF81A142A11002C6B76 /* Filter.h in Headers */,
 				AAD200041A142A11002C6B76 /* x-gfx-osx.h in Headers */,
 				AAD200191A142A11002C6B76 /* y-fft.h in Headers */,
+				AA0060AF1A19558C0023691A /* AudioFileHandler.h in Headers */,
 				AAD2FFB31A141BF0002C6B76 /* chuck_fft.h in Headers */,
 				AAD2FFF71A142A11002C6B76 /* DelayL.h in Headers */,
 				AAD200001A142A11002C6B76 /* x-buffer.h in Headers */,
@@ -339,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD2FFB61A141F45002C6B76 /* Room.cpp in Sources */,
+				AA0060AE1A19558C0023691A /* AudioFileHandler.cpp in Sources */,
 				AAD2001C1A142A11002C6B76 /* y-particle.cpp in Sources */,
 				AAD200101A142A11002C6B76 /* x-vector3d.cpp in Sources */,
 				AAD2001E1A142A11002C6B76 /* y-score-reader.cpp in Sources */,

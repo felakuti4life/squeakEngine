@@ -7,3 +7,8 @@
 //
 
 #include "Room.h"
+
+Room::Room(char* impulse_fpath, int size, int srate){
+    
+    impulse = this->fileHandler.readFile(impulse_fpath, &size, &srate);
+}

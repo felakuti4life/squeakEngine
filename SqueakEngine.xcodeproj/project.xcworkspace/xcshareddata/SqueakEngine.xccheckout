@@ -12,6 +12,8 @@
 	<dict>
 		<key>551703DCECF1BB78BA8A6BD1ECC162BF39477823</key>
 		<string>github.com:felakuti4life/squeakEngine.git</string>
+		<key>5D1882C727F3555E9E78B43F29CBC6129D1E5BE2</key>
+		<string>github.com:felakuti4life/squeak.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SqueakEngine.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>551703DCECF1BB78BA8A6BD1ECC162BF39477823</key>
 		<string>../..</string>
+		<key>5D1882C727F3555E9E78B43F29CBC6129D1E5BE2</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:felakuti4life/squeakEngine.git</string>
@@ -28,6 +32,14 @@
 	<string>551703DCECF1BB78BA8A6BD1ECC162BF39477823</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5D1882C727F3555E9E78B43F29CBC6129D1E5BE2</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

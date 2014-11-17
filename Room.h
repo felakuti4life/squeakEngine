@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "x-vector3d.h"
+#include "AudioFileHandler.h"
 class Room {
     //impulse in frequency samples
     float* impulse;
@@ -19,6 +20,9 @@ class Room {
     
 public:
     //TODO: init functions
+    Room(char* impulse_fpath, int size, int srate);
+private:
+    AudioFileHandler fileHandler;
 };
 
 #endif /* defined(__SqueakEngine__Room__) */
