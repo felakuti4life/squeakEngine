@@ -11,14 +11,19 @@
 
 #include <stdio.h>
 #include "x-vector3d.h"
+#include "AudioFileHandler.h"
+#include "AudioGen.h"
 
-class SoundSource {
-    float* source;
+class SoundSourceGen : AudioGen{
+    char* sourceFpath;
+    float* sound;
      Vector3D* visualDimensions;
+    int playhead;
+    int size, srate;
     
 public:
-    //TODO:
-    
+    typedef AudioGen super;
+    SoundSourceGen(char* fpath);
     float* getSound();
     
 };

@@ -14,11 +14,13 @@
 #include "AudioFileHandler.h"
 #include "AudioGen.h"
 #include "Convoluter.h"
+
 //ROOM GEN: Impulse creator
 class RoomGen : public AudioGen {
     //impulse in frequency samples
     float* impulse;
     Vector3D color;
+    
 public:
     typedef AudioGen super;
     //TODO: init functions

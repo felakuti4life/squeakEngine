@@ -51,8 +51,8 @@
 		AAD2FFB31A141BF0002C6B76 /* chuck_fft.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFB11A141BF0002C6B76 /* chuck_fft.h */; };
 		AAD2FFB61A141F45002C6B76 /* RoomGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFB41A141F45002C6B76 /* RoomGen.cpp */; };
 		AAD2FFB71A141F45002C6B76 /* RoomGen.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFB51A141F45002C6B76 /* RoomGen.h */; };
-		AAD2FFBA1A141F53002C6B76 /* SoundSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFB81A141F53002C6B76 /* SoundSource.cpp */; };
-		AAD2FFBB1A141F53002C6B76 /* SoundSource.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFB91A141F53002C6B76 /* SoundSource.h */; };
+		AAD2FFBA1A141F53002C6B76 /* SoundSourceGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFB81A141F53002C6B76 /* SoundSourceGen.cpp */; };
+		AAD2FFBB1A141F53002C6B76 /* SoundSourceGen.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFB91A141F53002C6B76 /* SoundSourceGen.h */; };
 		AAD2FFF11A142A11002C6B76 /* RtAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFBD1A142A11002C6B76 /* RtAudio.cpp */; };
 		AAD2FFF21A142A11002C6B76 /* RtAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFBE1A142A11002C6B76 /* RtAudio.h */; };
 		AAD2FFF31A142A11002C6B76 /* RtError.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFBF1A142A11002C6B76 /* RtError.h */; };
@@ -90,8 +90,8 @@
 		AAD2FFB11A141BF0002C6B76 /* chuck_fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chuck_fft.h; sourceTree = "<group>"; };
 		AAD2FFB41A141F45002C6B76 /* RoomGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoomGen.cpp; sourceTree = "<group>"; };
 		AAD2FFB51A141F45002C6B76 /* RoomGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomGen.h; sourceTree = "<group>"; };
-		AAD2FFB81A141F53002C6B76 /* SoundSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundSource.cpp; sourceTree = "<group>"; };
-		AAD2FFB91A141F53002C6B76 /* SoundSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundSource.h; sourceTree = "<group>"; };
+		AAD2FFB81A141F53002C6B76 /* SoundSourceGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundSourceGen.cpp; sourceTree = "<group>"; };
+		AAD2FFB91A141F53002C6B76 /* SoundSourceGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundSourceGen.h; sourceTree = "<group>"; };
 		AAD2FFBD1A142A11002C6B76 /* RtAudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RtAudio.cpp; sourceTree = "<group>"; };
 		AAD2FFBE1A142A11002C6B76 /* RtAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtAudio.h; sourceTree = "<group>"; };
 		AAD2FFBF1A142A11002C6B76 /* RtError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtError.h; sourceTree = "<group>"; };
@@ -161,12 +161,12 @@
 				AAD2FFC01A142A11002C6B76 /* stk */,
 				AAD2FFCA1A142A11002C6B76 /* x-api */,
 				AAD2FFE01A142A11002C6B76 /* y-api */,
-				AAD2FFB91A141F53002C6B76 /* SoundSource.h */,
+				AAD2FFB91A141F53002C6B76 /* SoundSourceGen.h */,
 				AA0060B01A19A1A30023691A /* AudioGen.cpp */,
 				AA0060B11A19A1A30023691A /* AudioGen.h */,
 				AA0060C01A19D7FA0023691A /* BackgroundGen.cpp */,
 				AA0060C11A19D7FA0023691A /* BackgroundGen.h */,
-				AAD2FFB81A141F53002C6B76 /* SoundSource.cpp */,
+				AAD2FFB81A141F53002C6B76 /* SoundSourceGen.cpp */,
 				AAD2FFA61A141B4D002C6B76 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 				AAD200111A142A11002C6B76 /* x-vector3d.h in Headers */,
 				AAD200031A142A11002C6B76 /* x-fun.h in Headers */,
 				AAD2FFF31A142A11002C6B76 /* RtError.h in Headers */,
-				AAD2FFBB1A141F53002C6B76 /* SoundSource.h in Headers */,
+				AAD2FFBB1A141F53002C6B76 /* SoundSourceGen.h in Headers */,
 				AAD2001F1A142A11002C6B76 /* y-score-reader.h in Headers */,
 				AA0060BD1A19B6090023691A /* x-gfx.h in Headers */,
 				AAD200151A142A11002C6B76 /* y-echo.h in Headers */,
@@ -369,7 +369,7 @@
 				AAD2000E1A142A11002C6B76 /* x-thread.cpp in Sources */,
 				AAD2FFFB1A142A11002C6B76 /* Stk.cpp in Sources */,
 				AA0060BC1A19B6090023691A /* x-gfx.cpp in Sources */,
-				AAD2FFBA1A141F53002C6B76 /* SoundSource.cpp in Sources */,
+				AAD2FFBA1A141F53002C6B76 /* SoundSourceGen.cpp in Sources */,
 				AAD2FFFF1A142A11002C6B76 /* x-buffer.cpp in Sources */,
 				AAD2FFF61A142A11002C6B76 /* DelayL.cpp in Sources */,
 				AAD2FFB21A141BF0002C6B76 /* chuck_fft.c in Sources */,
