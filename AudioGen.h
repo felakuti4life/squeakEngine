@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <vector>
+#include <math.h>
 using namespace std;
 class AudioGen {
     //instance variables here
@@ -24,13 +25,15 @@ public:
     AudioGen(float panVal);
     AudioGen(float panVal, float volumeVal);
     AudioGen(vector<AudioGen>priorChain, float panVal, float volumeVal);
-    bool synthesize2(float* input, float* output, int numframes);
+    //synthesize two channels
+    virtual bool synthesize2(float* input, float* output, int numframes);
     void setPan(float val);
     float getPan();
     void setVolume(float val);
     float getVolume();
     
 protected:
+    //non-recursive solution
     vector<AudioGen> sources;
 };
 

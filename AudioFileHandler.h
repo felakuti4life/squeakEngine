@@ -32,6 +32,6 @@ public:
     SAMPLE * readFile(const string & filename, int * size, int * srate);
     bool writeFile(const string & filename, SAMPLE * buffy, int size, int srate);
     
-};
+}filehandler;
 
 #endif /* defined(__SqueakEngine__AudioFileReader__) */

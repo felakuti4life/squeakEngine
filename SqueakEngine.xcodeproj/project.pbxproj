@@ -17,6 +17,8 @@
 		AA0060BD1A19B6090023691A /* x-gfx.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060B71A19B6090023691A /* x-gfx.h */; };
 		AA0060BE1A19B6090023691A /* x-network-osx.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060B81A19B6090023691A /* x-network-osx.h */; };
 		AA0060BF1A19B6090023691A /* x-network-osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA0060B91A19B6090023691A /* x-network-osx.mm */; };
+		AA0060C21A19D7FA0023691A /* BackgroundGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA0060C01A19D7FA0023691A /* BackgroundGen.cpp */; };
+		AA0060C31A19D7FA0023691A /* BackgroundGen.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060C11A19D7FA0023691A /* BackgroundGen.h */; };
 		AAD200001A142A11002C6B76 /* x-buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFCE1A142A11002C6B76 /* x-buffer.h */; };
 		AAD200011A142A11002C6B76 /* x-def.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFCF1A142A11002C6B76 /* x-def.h */; };
 		AAD200021A142A11002C6B76 /* x-fun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFD01A142A11002C6B76 /* x-fun.cpp */; };
@@ -47,8 +49,8 @@
 		AAD2FFAF1A141B89002C6B76 /* Convoluter.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFAD1A141B89002C6B76 /* Convoluter.h */; };
 		AAD2FFB21A141BF0002C6B76 /* chuck_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFB01A141BF0002C6B76 /* chuck_fft.c */; };
 		AAD2FFB31A141BF0002C6B76 /* chuck_fft.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFB11A141BF0002C6B76 /* chuck_fft.h */; };
-		AAD2FFB61A141F45002C6B76 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFB41A141F45002C6B76 /* Room.cpp */; };
-		AAD2FFB71A141F45002C6B76 /* Room.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFB51A141F45002C6B76 /* Room.h */; };
+		AAD2FFB61A141F45002C6B76 /* RoomGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFB41A141F45002C6B76 /* RoomGen.cpp */; };
+		AAD2FFB71A141F45002C6B76 /* RoomGen.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFB51A141F45002C6B76 /* RoomGen.h */; };
 		AAD2FFBA1A141F53002C6B76 /* SoundSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFB81A141F53002C6B76 /* SoundSource.cpp */; };
 		AAD2FFBB1A141F53002C6B76 /* SoundSource.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFB91A141F53002C6B76 /* SoundSource.h */; };
 		AAD2FFF11A142A11002C6B76 /* RtAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFBD1A142A11002C6B76 /* RtAudio.cpp */; };
@@ -79,13 +81,15 @@
 		AA0060B71A19B6090023691A /* x-gfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-gfx.h"; sourceTree = "<group>"; };
 		AA0060B81A19B6090023691A /* x-network-osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-network-osx.h"; sourceTree = "<group>"; };
 		AA0060B91A19B6090023691A /* x-network-osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "x-network-osx.mm"; sourceTree = "<group>"; };
+		AA0060C01A19D7FA0023691A /* BackgroundGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BackgroundGen.cpp; sourceTree = "<group>"; };
+		AA0060C11A19D7FA0023691A /* BackgroundGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundGen.h; sourceTree = "<group>"; };
 		AAD2FFA51A141B4D002C6B76 /* libSqueakEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSqueakEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD2FFAC1A141B89002C6B76 /* Convoluter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Convoluter.cpp; sourceTree = "<group>"; };
 		AAD2FFAD1A141B89002C6B76 /* Convoluter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Convoluter.h; sourceTree = "<group>"; };
 		AAD2FFB01A141BF0002C6B76 /* chuck_fft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chuck_fft.c; sourceTree = "<group>"; };
 		AAD2FFB11A141BF0002C6B76 /* chuck_fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chuck_fft.h; sourceTree = "<group>"; };
-		AAD2FFB41A141F45002C6B76 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Room.cpp; sourceTree = "<group>"; };
-		AAD2FFB51A141F45002C6B76 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		AAD2FFB41A141F45002C6B76 /* RoomGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoomGen.cpp; sourceTree = "<group>"; };
+		AAD2FFB51A141F45002C6B76 /* RoomGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomGen.h; sourceTree = "<group>"; };
 		AAD2FFB81A141F53002C6B76 /* SoundSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundSource.cpp; sourceTree = "<group>"; };
 		AAD2FFB91A141F53002C6B76 /* SoundSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundSource.h; sourceTree = "<group>"; };
 		AAD2FFBD1A142A11002C6B76 /* RtAudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RtAudio.cpp; sourceTree = "<group>"; };
@@ -151,8 +155,8 @@
 				AAD2FFAC1A141B89002C6B76 /* Convoluter.cpp */,
 				AA0060AC1A19558C0023691A /* AudioFileHandler.cpp */,
 				AA0060AD1A19558C0023691A /* AudioFileHandler.h */,
-				AAD2FFB51A141F45002C6B76 /* Room.h */,
-				AAD2FFB41A141F45002C6B76 /* Room.cpp */,
+				AAD2FFB51A141F45002C6B76 /* RoomGen.h */,
+				AAD2FFB41A141F45002C6B76 /* RoomGen.cpp */,
 				AAD2FFBC1A142A11002C6B76 /* rtaudio */,
 				AAD2FFC01A142A11002C6B76 /* stk */,
 				AAD2FFCA1A142A11002C6B76 /* x-api */,
@@ -160,6 +164,8 @@
 				AAD2FFB91A141F53002C6B76 /* SoundSource.h */,
 				AA0060B01A19A1A30023691A /* AudioGen.cpp */,
 				AA0060B11A19A1A30023691A /* AudioGen.h */,
+				AA0060C01A19D7FA0023691A /* BackgroundGen.cpp */,
+				AA0060C11A19D7FA0023691A /* BackgroundGen.h */,
 				AAD2FFB81A141F53002C6B76 /* SoundSource.cpp */,
 				AAD2FFA61A141B4D002C6B76 /* Products */,
 			);
@@ -283,9 +289,10 @@
 				AAD2FFFE1A142A11002C6B76 /* x-audio.h in Headers */,
 				AAD2000F1A142A11002C6B76 /* x-thread.h in Headers */,
 				AAD2000B1A142A11002C6B76 /* x-loadrgb.h in Headers */,
-				AAD2FFB71A141F45002C6B76 /* Room.h in Headers */,
+				AAD2FFB71A141F45002C6B76 /* RoomGen.h in Headers */,
 				AAD200131A142A11002C6B76 /* y-charting.h in Headers */,
 				AAD200171A142A11002C6B76 /* y-entity.h in Headers */,
+				AA0060C31A19D7FA0023691A /* BackgroundGen.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD2FFB61A141F45002C6B76 /* Room.cpp in Sources */,
+				AAD2FFB61A141F45002C6B76 /* RoomGen.cpp in Sources */,
 				AA0060B21A19A1A30023691A /* AudioGen.cpp in Sources */,
 				AA0060AE1A19558C0023691A /* AudioFileHandler.cpp in Sources */,
 				AAD2001C1A142A11002C6B76 /* y-particle.cpp in Sources */,
@@ -371,6 +378,7 @@
 				AAD2000A1A142A11002C6B76 /* x-loadrgb.cpp in Sources */,
 				AAD200181A142A11002C6B76 /* y-fft.cpp in Sources */,
 				AAD200141A142A11002C6B76 /* y-echo.cpp in Sources */,
+				AA0060C21A19D7FA0023691A /* BackgroundGen.cpp in Sources */,
 				AA0060BF1A19B6090023691A /* x-network-osx.mm in Sources */,
 				AAD2FFF41A142A11002C6B76 /* Delay.cpp in Sources */,
 			);

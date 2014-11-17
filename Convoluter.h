@@ -23,7 +23,7 @@ public:
     
 private:
     unsigned long next_power_2(unsigned long n);
-};
+}convoluter;
 
 
 #endif /* defined(__SqueakEngine__Convoluter__) */

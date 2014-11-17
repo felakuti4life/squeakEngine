@@ -55,7 +55,20 @@ float AudioGen::getVolume(){
     return volume;
 }
 
+//MARK: synthesize
 bool AudioGen::synthesize2(float *input, float *output, int numframes){
     
-    
+    for (int i = 0; i < sources.size(); i++) {
+        //accumulation
+         sources[i].synthesize2(input, output, numframes);
+    }
+    for (int j = 0; j < numframes * 2; j++) {
+        //processing here
+        output[j] = output[j] * volume;
+        if (j % 2)
+            output[j] = output[j] * sin(3.1415 * (pan + 1)/4);
+        else
+            output[j] = output[j] * sin(3.1415 * (1 - pan + 1)/4);
+        }
+    return true;
 }
