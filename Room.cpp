@@ -8,7 +8,7 @@
 
 #include "Room.h"
 
-Room::Room(char* impulse_fpath, int size, int srate){
-    
+Room::Room(char* impulse_fpath, int size, int srate, Vector3D c){
+    this->color = c;
     impulse = this->fileHandler.readFile(impulse_fpath, &size, &srate);
 }

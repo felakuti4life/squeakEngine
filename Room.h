@@ -16,11 +16,11 @@ class Room {
     //impulse in frequency samples
     float* impulse;
     
-    Vector3D* color;
+    Vector3D color;
     
 public:
     //TODO: init functions
-    Room(char* impulse_fpath, int size, int srate);
+    Room(char* impulse_fpath, int size, int srate, Vector3D c);
 private:
     AudioFileHandler fileHandler;
 };

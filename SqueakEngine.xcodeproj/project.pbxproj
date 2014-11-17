@@ -9,20 +9,22 @@
 /* Begin PBXBuildFile section */
 		AA0060AE1A19558C0023691A /* AudioFileHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA0060AC1A19558C0023691A /* AudioFileHandler.cpp */; };
 		AA0060AF1A19558C0023691A /* AudioFileHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060AD1A19558C0023691A /* AudioFileHandler.h */; };
+		AA0060B21A19A1A30023691A /* AudioGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA0060B01A19A1A30023691A /* AudioGen.cpp */; };
+		AA0060B31A19A1A30023691A /* AudioGen.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060B11A19A1A30023691A /* AudioGen.h */; };
+		AA0060BA1A19B6090023691A /* x-gfx-osx.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060B41A19B6090023691A /* x-gfx-osx.h */; };
+		AA0060BB1A19B6090023691A /* x-gfx-osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA0060B51A19B6090023691A /* x-gfx-osx.mm */; };
+		AA0060BC1A19B6090023691A /* x-gfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA0060B61A19B6090023691A /* x-gfx.cpp */; };
+		AA0060BD1A19B6090023691A /* x-gfx.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060B71A19B6090023691A /* x-gfx.h */; };
+		AA0060BE1A19B6090023691A /* x-network-osx.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060B81A19B6090023691A /* x-network-osx.h */; };
+		AA0060BF1A19B6090023691A /* x-network-osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA0060B91A19B6090023691A /* x-network-osx.mm */; };
 		AAD200001A142A11002C6B76 /* x-buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFCE1A142A11002C6B76 /* x-buffer.h */; };
 		AAD200011A142A11002C6B76 /* x-def.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFCF1A142A11002C6B76 /* x-def.h */; };
 		AAD200021A142A11002C6B76 /* x-fun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFD01A142A11002C6B76 /* x-fun.cpp */; };
 		AAD200031A142A11002C6B76 /* x-fun.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFD11A142A11002C6B76 /* x-fun.h */; };
-		AAD200041A142A11002C6B76 /* x-gfx-osx.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFD21A142A11002C6B76 /* x-gfx-osx.h */; };
-		AAD200051A142A11002C6B76 /* x-gfx-osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFD31A142A11002C6B76 /* x-gfx-osx.mm */; };
-		AAD200061A142A11002C6B76 /* x-gfx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFD41A142A11002C6B76 /* x-gfx.cpp */; };
-		AAD200071A142A11002C6B76 /* x-gfx.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFD51A142A11002C6B76 /* x-gfx.h */; };
 		AAD200081A142A11002C6B76 /* x-loadlum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFD61A142A11002C6B76 /* x-loadlum.cpp */; };
 		AAD200091A142A11002C6B76 /* x-loadlum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFD71A142A11002C6B76 /* x-loadlum.h */; };
 		AAD2000A1A142A11002C6B76 /* x-loadrgb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFD81A142A11002C6B76 /* x-loadrgb.cpp */; };
 		AAD2000B1A142A11002C6B76 /* x-loadrgb.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFD91A142A11002C6B76 /* x-loadrgb.h */; };
-		AAD2000C1A142A11002C6B76 /* x-network-osx.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFDA1A142A11002C6B76 /* x-network-osx.h */; };
-		AAD2000D1A142A11002C6B76 /* x-network-osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFDB1A142A11002C6B76 /* x-network-osx.mm */; };
 		AAD2000E1A142A11002C6B76 /* x-thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFDC1A142A11002C6B76 /* x-thread.cpp */; };
 		AAD2000F1A142A11002C6B76 /* x-thread.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFDD1A142A11002C6B76 /* x-thread.h */; };
 		AAD200101A142A11002C6B76 /* x-vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFDE1A142A11002C6B76 /* x-vector3d.cpp */; };
@@ -35,8 +37,6 @@
 		AAD200171A142A11002C6B76 /* y-entity.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFE61A142A11002C6B76 /* y-entity.h */; };
 		AAD200181A142A11002C6B76 /* y-fft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFE71A142A11002C6B76 /* y-fft.cpp */; };
 		AAD200191A142A11002C6B76 /* y-fft.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFE81A142A11002C6B76 /* y-fft.h */; };
-		AAD2001A1A142A11002C6B76 /* y-fluidsynth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFE91A142A11002C6B76 /* y-fluidsynth.cpp */; };
-		AAD2001B1A142A11002C6B76 /* y-fluidsynth.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFEA1A142A11002C6B76 /* y-fluidsynth.h */; };
 		AAD2001C1A142A11002C6B76 /* y-particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFEB1A142A11002C6B76 /* y-particle.cpp */; };
 		AAD2001D1A142A11002C6B76 /* y-particle.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFEC1A142A11002C6B76 /* y-particle.h */; };
 		AAD2001E1A142A11002C6B76 /* y-score-reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFED1A142A11002C6B76 /* y-score-reader.cpp */; };
@@ -71,6 +71,14 @@
 /* Begin PBXFileReference section */
 		AA0060AC1A19558C0023691A /* AudioFileHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioFileHandler.cpp; sourceTree = "<group>"; };
 		AA0060AD1A19558C0023691A /* AudioFileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileHandler.h; sourceTree = "<group>"; };
+		AA0060B01A19A1A30023691A /* AudioGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioGen.cpp; sourceTree = "<group>"; };
+		AA0060B11A19A1A30023691A /* AudioGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioGen.h; sourceTree = "<group>"; };
+		AA0060B41A19B6090023691A /* x-gfx-osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-gfx-osx.h"; sourceTree = "<group>"; };
+		AA0060B51A19B6090023691A /* x-gfx-osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "x-gfx-osx.mm"; sourceTree = "<group>"; };
+		AA0060B61A19B6090023691A /* x-gfx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "x-gfx.cpp"; sourceTree = "<group>"; };
+		AA0060B71A19B6090023691A /* x-gfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-gfx.h"; sourceTree = "<group>"; };
+		AA0060B81A19B6090023691A /* x-network-osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-network-osx.h"; sourceTree = "<group>"; };
+		AA0060B91A19B6090023691A /* x-network-osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "x-network-osx.mm"; sourceTree = "<group>"; };
 		AAD2FFA51A141B4D002C6B76 /* libSqueakEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSqueakEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD2FFAC1A141B89002C6B76 /* Convoluter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Convoluter.cpp; sourceTree = "<group>"; };
 		AAD2FFAD1A141B89002C6B76 /* Convoluter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Convoluter.h; sourceTree = "<group>"; };
@@ -99,16 +107,10 @@
 		AAD2FFCF1A142A11002C6B76 /* x-def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-def.h"; sourceTree = "<group>"; };
 		AAD2FFD01A142A11002C6B76 /* x-fun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "x-fun.cpp"; sourceTree = "<group>"; };
 		AAD2FFD11A142A11002C6B76 /* x-fun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-fun.h"; sourceTree = "<group>"; };
-		AAD2FFD21A142A11002C6B76 /* x-gfx-osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-gfx-osx.h"; sourceTree = "<group>"; };
-		AAD2FFD31A142A11002C6B76 /* x-gfx-osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "x-gfx-osx.mm"; sourceTree = "<group>"; };
-		AAD2FFD41A142A11002C6B76 /* x-gfx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "x-gfx.cpp"; sourceTree = "<group>"; };
-		AAD2FFD51A142A11002C6B76 /* x-gfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-gfx.h"; sourceTree = "<group>"; };
 		AAD2FFD61A142A11002C6B76 /* x-loadlum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "x-loadlum.cpp"; sourceTree = "<group>"; };
 		AAD2FFD71A142A11002C6B76 /* x-loadlum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-loadlum.h"; sourceTree = "<group>"; };
 		AAD2FFD81A142A11002C6B76 /* x-loadrgb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "x-loadrgb.cpp"; sourceTree = "<group>"; };
 		AAD2FFD91A142A11002C6B76 /* x-loadrgb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-loadrgb.h"; sourceTree = "<group>"; };
-		AAD2FFDA1A142A11002C6B76 /* x-network-osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-network-osx.h"; sourceTree = "<group>"; };
-		AAD2FFDB1A142A11002C6B76 /* x-network-osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "x-network-osx.mm"; sourceTree = "<group>"; };
 		AAD2FFDC1A142A11002C6B76 /* x-thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "x-thread.cpp"; sourceTree = "<group>"; };
 		AAD2FFDD1A142A11002C6B76 /* x-thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x-thread.h"; sourceTree = "<group>"; };
 		AAD2FFDE1A142A11002C6B76 /* x-vector3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "x-vector3d.cpp"; sourceTree = "<group>"; };
@@ -121,8 +123,6 @@
 		AAD2FFE61A142A11002C6B76 /* y-entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "y-entity.h"; sourceTree = "<group>"; };
 		AAD2FFE71A142A11002C6B76 /* y-fft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "y-fft.cpp"; sourceTree = "<group>"; };
 		AAD2FFE81A142A11002C6B76 /* y-fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "y-fft.h"; sourceTree = "<group>"; };
-		AAD2FFE91A142A11002C6B76 /* y-fluidsynth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "y-fluidsynth.cpp"; sourceTree = "<group>"; };
-		AAD2FFEA1A142A11002C6B76 /* y-fluidsynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "y-fluidsynth.h"; sourceTree = "<group>"; };
 		AAD2FFEB1A142A11002C6B76 /* y-particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "y-particle.cpp"; sourceTree = "<group>"; };
 		AAD2FFEC1A142A11002C6B76 /* y-particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "y-particle.h"; sourceTree = "<group>"; };
 		AAD2FFED1A142A11002C6B76 /* y-score-reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "y-score-reader.cpp"; sourceTree = "<group>"; };
@@ -158,6 +158,8 @@
 				AAD2FFCA1A142A11002C6B76 /* x-api */,
 				AAD2FFE01A142A11002C6B76 /* y-api */,
 				AAD2FFB91A141F53002C6B76 /* SoundSource.h */,
+				AA0060B01A19A1A30023691A /* AudioGen.cpp */,
+				AA0060B11A19A1A30023691A /* AudioGen.h */,
 				AAD2FFB81A141F53002C6B76 /* SoundSource.cpp */,
 				AAD2FFA61A141B4D002C6B76 /* Products */,
 			);
@@ -207,17 +209,17 @@
 				AAD2FFCF1A142A11002C6B76 /* x-def.h */,
 				AAD2FFD01A142A11002C6B76 /* x-fun.cpp */,
 				AAD2FFD11A142A11002C6B76 /* x-fun.h */,
-				AAD2FFD21A142A11002C6B76 /* x-gfx-osx.h */,
-				AAD2FFD31A142A11002C6B76 /* x-gfx-osx.mm */,
-				AAD2FFD41A142A11002C6B76 /* x-gfx.cpp */,
-				AAD2FFD51A142A11002C6B76 /* x-gfx.h */,
 				AAD2FFD61A142A11002C6B76 /* x-loadlum.cpp */,
 				AAD2FFD71A142A11002C6B76 /* x-loadlum.h */,
 				AAD2FFD81A142A11002C6B76 /* x-loadrgb.cpp */,
 				AAD2FFD91A142A11002C6B76 /* x-loadrgb.h */,
-				AAD2FFDA1A142A11002C6B76 /* x-network-osx.h */,
-				AAD2FFDB1A142A11002C6B76 /* x-network-osx.mm */,
 				AAD2FFDC1A142A11002C6B76 /* x-thread.cpp */,
+				AA0060B41A19B6090023691A /* x-gfx-osx.h */,
+				AA0060B51A19B6090023691A /* x-gfx-osx.mm */,
+				AA0060B61A19B6090023691A /* x-gfx.cpp */,
+				AA0060B71A19B6090023691A /* x-gfx.h */,
+				AA0060B81A19B6090023691A /* x-network-osx.h */,
+				AA0060B91A19B6090023691A /* x-network-osx.mm */,
 				AAD2FFDD1A142A11002C6B76 /* x-thread.h */,
 				AAD2FFDE1A142A11002C6B76 /* x-vector3d.cpp */,
 				AAD2FFDF1A142A11002C6B76 /* x-vector3d.h */,
@@ -236,8 +238,6 @@
 				AAD2FFE61A142A11002C6B76 /* y-entity.h */,
 				AAD2FFE71A142A11002C6B76 /* y-fft.cpp */,
 				AAD2FFE81A142A11002C6B76 /* y-fft.h */,
-				AAD2FFE91A142A11002C6B76 /* y-fluidsynth.cpp */,
-				AAD2FFEA1A142A11002C6B76 /* y-fluidsynth.h */,
 				AAD2FFEB1A142A11002C6B76 /* y-particle.cpp */,
 				AAD2FFEC1A142A11002C6B76 /* y-particle.h */,
 				AAD2FFED1A142A11002C6B76 /* y-score-reader.cpp */,
@@ -257,11 +257,13 @@
 			files = (
 				AAD2FFFC1A142A11002C6B76 /* Stk.h in Headers */,
 				AAD2FFF81A142A11002C6B76 /* Filter.h in Headers */,
-				AAD200041A142A11002C6B76 /* x-gfx-osx.h in Headers */,
+				AA0060BE1A19B6090023691A /* x-network-osx.h in Headers */,
+				AA0060B31A19A1A30023691A /* AudioGen.h in Headers */,
 				AAD200191A142A11002C6B76 /* y-fft.h in Headers */,
 				AA0060AF1A19558C0023691A /* AudioFileHandler.h in Headers */,
 				AAD2FFB31A141BF0002C6B76 /* chuck_fft.h in Headers */,
 				AAD2FFF71A142A11002C6B76 /* DelayL.h in Headers */,
+				AA0060BA1A19B6090023691A /* x-gfx-osx.h in Headers */,
 				AAD200001A142A11002C6B76 /* x-buffer.h in Headers */,
 				AAD200011A142A11002C6B76 /* x-def.h in Headers */,
 				AAD200111A142A11002C6B76 /* x-vector3d.h in Headers */,
@@ -269,12 +271,11 @@
 				AAD2FFF31A142A11002C6B76 /* RtError.h in Headers */,
 				AAD2FFBB1A141F53002C6B76 /* SoundSource.h in Headers */,
 				AAD2001F1A142A11002C6B76 /* y-score-reader.h in Headers */,
+				AA0060BD1A19B6090023691A /* x-gfx.h in Headers */,
 				AAD200151A142A11002C6B76 /* y-echo.h in Headers */,
 				AAD2FFF21A142A11002C6B76 /* RtAudio.h in Headers */,
-				AAD2000C1A142A11002C6B76 /* x-network-osx.h in Headers */,
 				AAD2FFF51A142A11002C6B76 /* Delay.h in Headers */,
 				AAD2001D1A142A11002C6B76 /* y-particle.h in Headers */,
-				AAD2001B1A142A11002C6B76 /* y-fluidsynth.h in Headers */,
 				AAD200091A142A11002C6B76 /* x-loadlum.h in Headers */,
 				AAD2FFAF1A141B89002C6B76 /* Convoluter.h in Headers */,
 				AAD200211A142A11002C6B76 /* y-waveform.h in Headers */,
@@ -282,7 +283,6 @@
 				AAD2FFFE1A142A11002C6B76 /* x-audio.h in Headers */,
 				AAD2000F1A142A11002C6B76 /* x-thread.h in Headers */,
 				AAD2000B1A142A11002C6B76 /* x-loadrgb.h in Headers */,
-				AAD200071A142A11002C6B76 /* x-gfx.h in Headers */,
 				AAD2FFB71A141F45002C6B76 /* Room.h in Headers */,
 				AAD200131A142A11002C6B76 /* y-charting.h in Headers */,
 				AAD200171A142A11002C6B76 /* y-entity.h in Headers */,
@@ -346,32 +346,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD2FFB61A141F45002C6B76 /* Room.cpp in Sources */,
+				AA0060B21A19A1A30023691A /* AudioGen.cpp in Sources */,
 				AA0060AE1A19558C0023691A /* AudioFileHandler.cpp in Sources */,
 				AAD2001C1A142A11002C6B76 /* y-particle.cpp in Sources */,
 				AAD200101A142A11002C6B76 /* x-vector3d.cpp in Sources */,
+				AA0060BB1A19B6090023691A /* x-gfx-osx.mm in Sources */,
 				AAD2001E1A142A11002C6B76 /* y-score-reader.cpp in Sources */,
 				AAD2FFF91A142A11002C6B76 /* MidiFileIn.cpp in Sources */,
 				AAD2FFAE1A141B89002C6B76 /* Convoluter.cpp in Sources */,
 				AAD2FFFD1A142A11002C6B76 /* x-audio.cpp in Sources */,
 				AAD200021A142A11002C6B76 /* x-fun.cpp in Sources */,
 				AAD200081A142A11002C6B76 /* x-loadlum.cpp in Sources */,
-				AAD200051A142A11002C6B76 /* x-gfx-osx.mm in Sources */,
 				AAD200161A142A11002C6B76 /* y-entity.cpp in Sources */,
-				AAD200061A142A11002C6B76 /* x-gfx.cpp in Sources */,
 				AAD200121A142A11002C6B76 /* y-charting.cpp in Sources */,
 				AAD2000E1A142A11002C6B76 /* x-thread.cpp in Sources */,
 				AAD2FFFB1A142A11002C6B76 /* Stk.cpp in Sources */,
+				AA0060BC1A19B6090023691A /* x-gfx.cpp in Sources */,
 				AAD2FFBA1A141F53002C6B76 /* SoundSource.cpp in Sources */,
 				AAD2FFFF1A142A11002C6B76 /* x-buffer.cpp in Sources */,
 				AAD2FFF61A142A11002C6B76 /* DelayL.cpp in Sources */,
 				AAD2FFB21A141BF0002C6B76 /* chuck_fft.c in Sources */,
-				AAD2001A1A142A11002C6B76 /* y-fluidsynth.cpp in Sources */,
-				AAD2000D1A142A11002C6B76 /* x-network-osx.mm in Sources */,
 				AAD2FFF11A142A11002C6B76 /* RtAudio.cpp in Sources */,
 				AAD200201A142A11002C6B76 /* y-waveform.cpp in Sources */,
 				AAD2000A1A142A11002C6B76 /* x-loadrgb.cpp in Sources */,
 				AAD200181A142A11002C6B76 /* y-fft.cpp in Sources */,
 				AAD200141A142A11002C6B76 /* y-echo.cpp in Sources */,
+				AA0060BF1A19B6090023691A /* x-network-osx.mm in Sources */,
 				AAD2FFF41A142A11002C6B76 /* Delay.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,9 +412,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lsndfile";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -447,8 +454,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lsndfile";
 				SDKROOT = macosx;
 			};
 			name = Release;
