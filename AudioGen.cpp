@@ -15,7 +15,7 @@ AudioGen::AudioGen(){
     volume = 1.0;
 }
 
-AudioGen::AudioGen(vector<AudioGen>priorChain){
+AudioGen::AudioGen(vector<AudioGen*>priorChain){
     pan = 0.5;
     volume = 1.0;
     this->sources = priorChain;
@@ -31,7 +31,7 @@ AudioGen::AudioGen(float panVal, float volumeVal){
     volume = 1.0;
 }
 
-AudioGen::AudioGen(vector<AudioGen>priorChain, float panVal, float volumeVal){
+AudioGen::AudioGen(vector<AudioGen*>priorChain, float panVal, float volumeVal){
     sources = priorChain;
     pan = panVal;
     volume = volumeVal;
@@ -60,7 +60,7 @@ bool AudioGen::synthesize2(float *input, float *output, int numframes){
     
     for (int i = 0; i < sources.size(); i++) {
         //accumulation
-         sources[i].synthesize2(input, output, numframes);
+         sources[i]->synthesize2(input, output, numframes);
     }
     for (int j = 0; j < numframes * 2; j++) {
         //processing here

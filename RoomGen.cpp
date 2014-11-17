@@ -8,14 +8,22 @@
 
 #include "RoomGen.h"
 
-RoomGen::RoomGen(char* impulse_fpath, int size, int srate, Vector3D c){
-    this->color = c;
-    impulse = filehandler.readFile(impulse_fpath, &size, &srate);
+
+RoomGen::RoomGen(string impulse_fpath /*Vector3D c*/){
+    //this->color = c;
+    impulse = filer.readFile(impulse_fpath, &size, &srate);
 }
+
+RoomGen::RoomGen(string impulse_fpath, vector<AudioGen*> sourceList){
+    impulse = filer.readFile(impulse_fpath, &size, &srate);
+    sources = sourceList;
+    
+}
+
 
 bool RoomGen::synthesize2(float *input, float *output, int numframes){
     super::synthesize2(input, output, numframes);
     //processing here
-    output = convoluter.convolveSourceWithSpace(output, impulse);
+    output = convolver.convolveSourceWithSpace(output, impulse);
     return true;
 }

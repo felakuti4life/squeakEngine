@@ -11,13 +11,13 @@
 
 #include <stdio.h>
 #include "AudioGen.h"
-#include "AudioFileHandler.h"
+
 
 class BackgroundGen : public AudioGen {
-    <#instance variables#>
+    
     
 public:
-    <#member functions#>
+    
 };
 
 #endif /* defined(__SqueakEngine__BackgroundGen__) */

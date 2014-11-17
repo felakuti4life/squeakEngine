@@ -13,6 +13,8 @@
 #include <vector>
 #include <math.h>
 using namespace std;
+
+//Generic Unit Generator.
 class AudioGen {
     //instance variables here
     //pan: 0.0 = left, 1.0 = right
@@ -21,10 +23,10 @@ class AudioGen {
     float volume;
 public:
     AudioGen();
-    AudioGen(vector<AudioGen>priorChain);
+    AudioGen(vector<AudioGen*>priorChain);
     AudioGen(float panVal);
     AudioGen(float panVal, float volumeVal);
-    AudioGen(vector<AudioGen>priorChain, float panVal, float volumeVal);
+    AudioGen(vector<AudioGen*>priorChain, float panVal, float volumeVal);
     //synthesize two channels
     virtual bool synthesize2(float* input, float* output, int numframes);
     void setPan(float val);
@@ -34,7 +36,7 @@ public:
     
 protected:
     //non-recursive solution
-    vector<AudioGen> sources;
+    vector<AudioGen*> sources;
 };
 
 #endif /* defined(__SqueakEngine__AudioGen__) */

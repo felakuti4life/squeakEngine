@@ -8,7 +8,12 @@
 
 #include "SoundSourceGen.h"
 
-SoundSourceGen::SoundSourceGen(char* fpath){
+
+SoundSourceGen::SoundSourceGen(string fpath){
     super::AudioGen();
-    sound = filehandler.readFile(fpath, &size, &srate);
+    sound = filer.readFile(fpath, &size, &srate);
+}
+
+float* SoundSourceGen::getSound(){
+    return sound;
 }

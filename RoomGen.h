@@ -10,21 +10,28 @@
 #define __SqueakEngine__Room__
 
 #include <stdio.h>
-#include "x-vector3d.h"
-#include "AudioFileHandler.h"
+//#include "x-vector3d.h"
+#include <vector>
+#include <string>
+using namespace std;
 #include "AudioGen.h"
+#include "AudioFileHandler.h"
 #include "Convoluter.h"
 
 //ROOM GEN: Impulse creator
 class RoomGen : public AudioGen {
     //impulse in frequency samples
     float* impulse;
-    Vector3D color;
+    AudioFileHandler filer;
+    Convoluter convolver;
+    int size, srate;
+    //Vector3D color;
     
 public:
     typedef AudioGen super;
     //TODO: init functions
-    RoomGen(char* impulse_fpath, int size, int srate, Vector3D c);
+    RoomGen(string impulse_fpath /*Vector3D c*/);
+    RoomGen(string impulse_fpath, vector<AudioGen*> sourceList);
     bool synthesize2(float *input, float *output, int numframes);
 
 };

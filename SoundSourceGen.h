@@ -10,20 +10,23 @@
 #define __SqueakEngine__SoundSource__
 
 #include <stdio.h>
-#include "x-vector3d.h"
+#include <string>
+//#include "x-vector3d.h"
 #include "AudioFileHandler.h"
 #include "AudioGen.h"
 
 class SoundSourceGen : AudioGen{
+    AudioFileHandler filer;
+    
     char* sourceFpath;
     float* sound;
-     Vector3D* visualDimensions;
+    //Vector3D* visualDimensions;
     int playhead;
     int size, srate;
     
 public:
     typedef AudioGen super;
-    SoundSourceGen(char* fpath);
+    SoundSourceGen(string fpath);
     float* getSound();
     
 };
