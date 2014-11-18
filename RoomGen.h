@@ -25,6 +25,7 @@ class RoomGen : public AudioGen {
     AudioFileHandler filer;
     Convoluter convolver;
     int size, srate, channels, playhead;
+    bool alreadyConvolved;
     //Vector3D color;
     
 public:

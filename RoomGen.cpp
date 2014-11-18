@@ -23,22 +23,25 @@ void RoomGen::rewind(){
     playhead = 0;
 }
 void RoomGen::prepareConvolvedAudio(){
-    AudioGen source = **super::getChain().end();
+    AudioGen source = *super::getChain().back();
     size = size + source.getSize();
-    convolver.convolveSourceWithSpace(source.getSound(), impulse);
+    float* convolved = convolver.convolveSourceWithSpace(source.getSound(), impulse);
+    super::setSound(convolved);
+    alreadyConvolved = true;
 }
 
 bool RoomGen::synthesize2(float *input, float *output, int numframes){
-    super::synthesize2(input, output, numframes);
+    //ssuper::synthesize2(input, output, numframes);
     //processing here
     for (int i = 0; i < numframes; i++) {
         if (playhead >= size) {
             rewind();
             //return false;
         }
-        output[i*2] = super::getSound()[playhead*2];
-        output[i*2+1] = super::getSound()[playhead*2+1];
-        //cout << output[i] << endl;
+        if(alreadyConvolved){
+            output[i*2] = super::getSound()[playhead*2];
+            output[i*2+1] = super::getSound()[playhead*2+1];
+        }
         playhead++;
     }
     return true;

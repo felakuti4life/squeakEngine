@@ -90,9 +90,9 @@ bool AudioGen::synthesize2(float *input, float *output, int numframes){
         //processing here
         output[j] = output[j] * volume;
         if (j % 2)
-            output[j] = output[j] * sin(3.1415 * (pan + 1)/4);
+            output[j] = output[j] * sin(3.1415 * pan/4);
         else
-            output[j] = output[j] * sin(3.1415 * (1 - pan + 1)/4);
+            output[j] = output[j] * sin(3.1415 * (1 - pan)/4);
         }
     return true;
 }
