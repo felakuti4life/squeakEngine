@@ -49,7 +49,11 @@
 
 #include <string>
 #include <vector>
+#include <CoreAudio/CoreAudio.h>
+#include <CoreAudio/AudioHardwareDeprecated.h>
+#include <CoreFoundation/CoreFoundation.h>
 #include "RtError.h"
+using namespace std;
 
 /*! \typedef typedef unsigned long RtAudioFormat;
     \brief RtAudio data format type.

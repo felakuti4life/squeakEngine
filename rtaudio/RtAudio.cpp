@@ -130,10 +130,12 @@ void RtAudio :: openRtApi( RtAudio::Api api )
   if ( api == MACOSX_CORE )
     rtapi_ = new RtApiCore();
 #endif
+    
 #if defined(__RTAUDIO_DUMMY__)
   if ( api == RTAUDIO_DUMMY )
     rtapi_ = new RtApiDummy();
 #endif
+     
 }
 
 RtAudio :: RtAudio( RtAudio::Api api ) throw()

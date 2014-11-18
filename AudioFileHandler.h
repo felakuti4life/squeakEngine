@@ -29,7 +29,7 @@ using namespace std;
 class AudioFileHandler {
     
 public:
-    SAMPLE * readFile(const string & filename, int * size, int * srate);
+    SAMPLE * readFile(const string & filename, int *channels, int * size, int * srate);
     bool writeFile(const string & filename, SAMPLE * buffy, int size, int srate);
     
 };

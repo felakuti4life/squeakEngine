@@ -8,7 +8,7 @@
 
 #include "AudioFileHandler.h"
 
-SAMPLE * AudioFileHandler::readFile(const string &filename, int *size, int *srate)
+SAMPLE * AudioFileHandler::readFile(const string &filename, int *channels, int *size, int *srate)
 {
     // handle
     SNDFILE * sf = NULL;
@@ -32,13 +32,8 @@ SAMPLE * AudioFileHandler::readFile(const string &filename, int *size, int *srat
         return NULL;
     }
     
-    // make sure it's mono
-    if(info.channels > 1)
-    {
-        //TODO: Implement stereo
-        cout << "error: '" << filename << "' is not MONO" << endl;
-        goto done;
-    }
+    
+    
     
     // allocate the whole thing!
     buffer = new SAMPLE[info.frames];
@@ -64,7 +59,7 @@ SAMPLE * AudioFileHandler::readFile(const string &filename, int *size, int *srat
     *size = info.frames;
     // set srate
     *srate = info.samplerate;
-    
+    *channels = info.channels;
 done:
     // close sf
     if( sf ) sf_close( sf );

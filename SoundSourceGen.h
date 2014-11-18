@@ -15,20 +15,21 @@
 #include "AudioFileHandler.h"
 #include "AudioGen.h"
 
-class SoundSourceGen : AudioGen{
+class SoundSourceGen : public AudioGen{
     AudioFileHandler filer;
-    
-    char* sourceFpath;
+    string fpath;
     float* sound;
     //Vector3D* visualDimensions;
     int playhead;
-    int size, srate;
+    int size, srate, channels;
     
 public:
     typedef AudioGen super;
     SoundSourceGen(string fpath);
     float* getSound();
-    
+    void setSound(string fpath);
+    void rewind();
+    bool synthesize2(float *input, float *output, int numframes);
 };
 
 #endif /* defined(__SqueakEngine__SoundSource__) */

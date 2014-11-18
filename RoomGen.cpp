@@ -11,11 +11,11 @@
 
 RoomGen::RoomGen(string impulse_fpath /*Vector3D c*/){
     //this->color = c;
-    impulse = filer.readFile(impulse_fpath, &size, &srate);
+    impulse = filer.readFile(impulse_fpath, &channels, &size, &srate);
 }
 
 RoomGen::RoomGen(string impulse_fpath, vector<AudioGen*> sourceList){
-    impulse = filer.readFile(impulse_fpath, &size, &srate);
+    impulse = filer.readFile(impulse_fpath, &channels, &size, &srate);
     sources = sourceList;
     
 }
