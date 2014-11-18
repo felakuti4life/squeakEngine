@@ -21,7 +21,7 @@ using namespace std;
 //ROOM GEN: Impulse creator
 class RoomGen : public AudioGen {
     //impulse in frequency samples
-    float* impulse;
+    SAMPLE* impulse;
     AudioFileHandler filer;
     Convoluter convolver;
     int size, srate, channels, playhead;
@@ -32,6 +32,8 @@ public:
     //TODO: init functions
     RoomGen(string impulse_fpath /*Vector3D c*/);
     RoomGen(string impulse_fpath, vector<AudioGen*> sourceList);
+    void rewind();
+    void prepareConvolvedAudio();
     bool synthesize2(float *input, float *output, int numframes);
 
 };

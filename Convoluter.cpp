@@ -76,9 +76,9 @@ void convolve_fft( SAMPLE * f, int fsize, SAMPLE * g, int gsize, SAMPLE * buffy,
 }
 
 float* Convoluter::convolveSourceWithSpace(float *source, float *response){
-    int floatsize = sizeof(float);
-    int fsize = sizeof(source)/floatsize;
-    int gsize = sizeof(response)/floatsize;
+    int samplesize = sizeof(float);
+    int fsize = sizeof(source)/samplesize;
+    int gsize = sizeof(response)/samplesize;
     int size = fsize + gsize - 1;
     
     SAMPLE * buffer = new SAMPLE[size];

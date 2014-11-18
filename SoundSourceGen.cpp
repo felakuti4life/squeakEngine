@@ -11,32 +11,37 @@
 
 SoundSourceGen::SoundSourceGen(string fpath){
     super::AudioGen();
-    sound = filer.readFile(fpath, &channels, &size, &srate);
+    float* s = filer.readFile(fpath, &channels, &size, &srate);
+    super::setSound(s);
     this->fpath = fpath;
+    cout << "channels: " << channels << " size: " << size << " srate: " << srate << endl;
 }
 
-float* SoundSourceGen::getSound(){
-    return sound;
-}
 
-void SoundSourceGen::setSound(string fpath){
-    sound = filer.readFile(fpath, &channels, &size, &srate);
+void SoundSourceGen::loadSound(string fpath){
+    float* s = filer.readFile(fpath, &channels, &size, &srate);
+    super::setSound(s);
 }
 
 void SoundSourceGen::rewind(){
     playhead = 0;
 }
 
+int SoundSourceGen::getSize(){return size;}
+int SoundSourceGen::getSRate(){return srate;}
+int SoundSourceGen::getChannels(){return channels;}
+
 bool SoundSourceGen::synthesize2(float *input, float *output, int numframes){
     super::synthesize2(input, output, numframes);
     //processing here
-    cout << "counter: " << playhead << endl;
-    for (int i = 0; i < numframes * 2; i++) {
-        if (playhead >= size*channels) {
+    //cout << "size: " << playhead/size << endl;
+    for (int i = 0; i < numframes; i++) {
+        if (playhead >= size) {
             rewind();
             //return false;
         }
-        output[i] = sound[playhead];
+        output[i*2] = super::getSound()[playhead*2];
+        output[i*2+1] = super::getSound()[playhead*2+1];
         //cout << output[i] << endl;
         playhead++;
     }

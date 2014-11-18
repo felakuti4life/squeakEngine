@@ -55,6 +55,30 @@ float AudioGen::getVolume(){
     return volume;
 }
 
+void AudioGen::setSound(float *s){
+    sound = s;
+}
+
+float* AudioGen::getSound(){
+    return sound;
+}
+
+void AudioGen::setChain(vector<AudioGen *> chain){
+    sources = chain;
+}
+
+vector<AudioGen*> AudioGen::getChain(){
+    return sources;
+}
+
+void AudioGen::setSize(int s){
+    size = s;
+}
+
+int AudioGen::getSize(){
+    return size;
+}
+
 //MARK: synthesize
 bool AudioGen::synthesize2(float *input, float *output, int numframes){
     

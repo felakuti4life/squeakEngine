@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string>
+#include <math.h>
 //#include "x-vector3d.h"
 #include "AudioFileHandler.h"
 #include "AudioGen.h"
@@ -18,7 +19,6 @@
 class SoundSourceGen : public AudioGen{
     AudioFileHandler filer;
     string fpath;
-    float* sound;
     //Vector3D* visualDimensions;
     int playhead;
     int size, srate, channels;
@@ -26,10 +26,13 @@ class SoundSourceGen : public AudioGen{
 public:
     typedef AudioGen super;
     SoundSourceGen(string fpath);
-    float* getSound();
-    void setSound(string fpath);
+    void loadSound(string fpath);
     void rewind();
     bool synthesize2(float *input, float *output, int numframes);
+    
+    int getSize();
+    int getSRate();
+    int getChannels();
 };
 
 #endif /* defined(__SqueakEngine__SoundSource__) */
