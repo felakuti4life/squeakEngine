@@ -28,10 +28,6 @@ unsigned long next_power_2( unsigned long n )
 
 void convolve_fft( SAMPLE * f, int fsize, SAMPLE * g, int gsize, SAMPLE * buffy, int size )
 {
-    // sanity check
-    //FIXME: where does assert live?
-    //assert((fsize + gsize - 1) == size);
-    
     // make buffers to hold kernel and signal
     unsigned int fftsize = next_power_2( fsize + gsize - 1 );
     // do it
@@ -75,15 +71,38 @@ void convolve_fft( SAMPLE * f, int fsize, SAMPLE * g, int gsize, SAMPLE * buffy,
     memcpy( buffy, result, sizeof(SAMPLE) * size );
 }
 
-float* Convoluter::convolveSourceWithSpace(float *source, float *response){
-    int samplesize = sizeof(float);
+float* Convoluter::convolveSteroSourceWithStereoSpace(float *source, float *response){
+    int samplesize = sizeof(SAMPLE);
+    //TODO: split into stereo, recombine
+    
     int fsize = sizeof(source)/samplesize;
     int gsize = sizeof(response)/samplesize;
     int size = fsize + gsize - 1;
     
+    float* sourcechannel1 = new SAMPLE[fsize/2];
+    float* sourcechannel2 = new SAMPLE[fsize/2];
+    float* responsechannel1 = new SAMPLE[gsize/2];
+    float* responsechannel2 = new SAMPLE[gsize/2];
+    
+    for(int i = 0; i < fsize/2; i++){
+        sourcechannel1[i] = source[i*2];
+        sourcechannel2[i] = source[i*2+1];
+    }
+    for (int i = 0; i < gsize/2; i ++) {
+        responsechannel1[i] = response[i*2];
+        responsechannel2[i] = response[i*2+1];
+    }
+    SAMPLE * bufferchannel1 = new SAMPLE[size/2];
+    SAMPLE * bufferchannel2 = new SAMPLE[size/2];
     SAMPLE * buffer = new SAMPLE[size];
     
-    convolve_fft(source, fsize, response, gsize, buffer, size);
+    convolve_fft(sourcechannel1, fsize/2, responsechannel1, gsize/2, bufferchannel1, size);
+    convolve_fft(sourcechannel2, fsize/2, responsechannel2, gsize/2, bufferchannel2, size);
+    
+    for (int i = 0; i < size/2; i++) {
+        buffer[i*2] = bufferchannel1[i];
+        buffer[i*2+1] = bufferchannel2[i];
+    }
     return buffer;
     
     
