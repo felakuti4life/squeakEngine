@@ -29,6 +29,7 @@ unsigned long next_power_2( unsigned long n )
 void convolve_fft( SAMPLE * f, int fsize, SAMPLE * g, int gsize, SAMPLE * buffy, int size )
 {
     // make buffers to hold kernel and signal
+    
     unsigned int fftsize = next_power_2( fsize + gsize - 1 );
     // do it
     SAMPLE * fbuf = new SAMPLE[fftsize];
@@ -64,7 +65,7 @@ void convolve_fft( SAMPLE * f, int fsize, SAMPLE * g, int gsize, SAMPLE * buffy,
         rcomp[i].im = fre * gim + fim * gre;
     }
     
-    // invers fft
+    // inverse fft
     rfft(result, fftsize/2, FFT_INVERSE );
     
     // copy into buffy
@@ -94,10 +95,11 @@ float* Convoluter::convolveSteroSourceWithStereoSpace(float *source, int sSize, 
     SAMPLE * bufferchannel1 = new SAMPLE[size/2];
     SAMPLE * bufferchannel2 = new SAMPLE[size/2];
     SAMPLE * buffer = new SAMPLE[size];
-    
-    convolve_fft(sourcechannel1, fsize/2, responsechannel1, gsize/2, bufferchannel1, size);
-    convolve_fft(sourcechannel2, fsize/2, responsechannel2, gsize/2, bufferchannel2, size);
-    
+    cout << "left channel..." << endl;
+    convolve_fft(sourcechannel1, fsize/2, responsechannel1, gsize/2, bufferchannel1, size/2);
+    cout << "right channel..." << endl;
+    convolve_fft(sourcechannel2, fsize/2, responsechannel2, gsize/2, bufferchannel2, size/2);
+    cout << "joining..." << endl;
     for (int i = 0; i < size/2; i++) {
         buffer[i*2] = bufferchannel1[i];
         buffer[i*2+1] = bufferchannel2[i];

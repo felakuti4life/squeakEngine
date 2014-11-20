@@ -96,3 +96,10 @@ bool AudioGen::synthesize2(float *input, float *output, int numframes){
         }
     return true;
 }
+
+void AudioGen::cleanup(){
+    if (sound){
+        delete [] sound;
+        sound = NULL;
+    }
+}

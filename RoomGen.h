@@ -30,11 +30,13 @@ class RoomGen : public AudioGen {
     
 public:
     typedef AudioGen super;
-    //TODO: init functions
+    //MARL: init functions
     RoomGen(string impulse_fpath /*Vector3D c*/);
     RoomGen(string impulse_fpath, vector<AudioGen*> sourceList);
+    
     void rewind();
     void prepareConvolvedAudio();
+    SAMPLE* getSoundInRoom(SAMPLE* s, int sSize, int *tSize);
     bool synthesize2(float *input, float *output, int numframes);
 
 };

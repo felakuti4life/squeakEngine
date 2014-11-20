@@ -36,7 +36,7 @@ SAMPLE * AudioFileHandler::readFile(const string &filename, int *channels, int *
     
     
     // allocate the whole thing!
-    buffer = new SAMPLE[info.frames];
+    buffer = new SAMPLE[info.frames * info.channels];
     // check it
     if( !buffer )
     {
@@ -46,7 +46,7 @@ SAMPLE * AudioFileHandler::readFile(const string &filename, int *channels, int *
     }
     
     // read it
-    if( sf_read_float( sf, buffer, info.frames ) != info.frames )
+    if( sf_read_float( sf, buffer, info.frames * info.channels ) != info.frames * info.channels )
     {
         // error message
         cout << "error: can't read file..." << endl;

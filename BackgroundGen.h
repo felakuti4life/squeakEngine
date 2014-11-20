@@ -10,10 +10,10 @@
 #define __SqueakEngine__BackgroundGen__
 
 #include <stdio.h>
-#include "AudioGen.h"
+#include "SoundSourceGen.h"
 
 
-class BackgroundGen : public AudioGen {
+class BackgroundGen : public SoundSourceGen {
     
     
 public:

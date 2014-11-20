@@ -32,6 +32,11 @@ void RoomGen::prepareConvolvedAudio(){
     alreadyConvolved = true;
 }
 
+SAMPLE* RoomGen::getSoundInRoom(float *s, int sSize, int *tSize){
+    *tSize = sSize + size - 1;
+    return convolver.convolveSteroSourceWithStereoSpace(s, sSize, impulse, size);
+}
+
 bool RoomGen::synthesize2(float *input, float *output, int numframes){
     //ssuper::synthesize2(input, output, numframes);
     //processing here

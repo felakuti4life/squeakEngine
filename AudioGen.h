@@ -49,6 +49,7 @@ public:
     
     virtual bool synthesize2(float* input, float* output, int numframes);
     
+    void cleanup();
     
 protected:
     //non-recursive solution

@@ -17,22 +17,31 @@
 #include "AudioGen.h"
 
 class SoundSourceGen : public AudioGen{
-    AudioFileHandler filer;
-    string fpath;
-    //Vector3D* visualDimensions;
-    int playhead;
-    int size, srate, channels;
+    
     
 public:
     typedef AudioGen super;
     SoundSourceGen(string fpath);
     void loadSound(string fpath);
-    void rewind();
+    void rewind(int pos = 0);
     bool synthesize2(float *input, float *output, int numframes);
+    
+    void setPlaybackRate(float f);
+    float getPlaybackRate();
     
     int getSize();
     int getSRate();
     int getChannels();
+    
+    void cleanup();
+    
+protected:
+    AudioFileHandler filer;
+    string fpath;
+    //Vector3D* visualDimensions;
+    float playhead;
+    int size, srate, channels;
+    float playbackRate = 1;
 };
 
 #endif /* defined(__SqueakEngine__SoundSource__) */
