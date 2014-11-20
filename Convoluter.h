@@ -19,7 +19,7 @@ public:
     //TODO:
     //convolveSourceWithSpace(float* source, float* space)
     //returns float* time-domain
-    float* convolveSteroSourceWithStereoSpace(float* source, float* response);
+    float* convolveSteroSourceWithStereoSpace(float* source, int sSize, float* response, int rSize);
     
 private:
     unsigned long next_power_2(unsigned long n);

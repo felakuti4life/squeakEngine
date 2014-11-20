@@ -71,18 +71,17 @@ void convolve_fft( SAMPLE * f, int fsize, SAMPLE * g, int gsize, SAMPLE * buffy,
     memcpy( buffy, result, sizeof(SAMPLE) * size );
 }
 
-float* Convoluter::convolveSteroSourceWithStereoSpace(float *source, float *response){
-    int samplesize = sizeof(SAMPLE);
-    //TODO: split into stereo, recombine
+float* Convoluter::convolveSteroSourceWithStereoSpace(float *source, int sSize, float *response, int rSize){
+    //int samplesize = sizeof(SAMPLE);
     
-    int fsize = sizeof(source)/samplesize;
-    int gsize = sizeof(response)/samplesize;
+    int fsize = sSize;
+    int gsize = rSize;
     int size = fsize + gsize - 1;
     
-    float* sourcechannel1 = new SAMPLE[fsize/2];
-    float* sourcechannel2 = new SAMPLE[fsize/2];
-    float* responsechannel1 = new SAMPLE[gsize/2];
-    float* responsechannel2 = new SAMPLE[gsize/2];
+    SAMPLE* sourcechannel1 = new SAMPLE[fsize/2];
+    SAMPLE* sourcechannel2 = new SAMPLE[fsize/2];
+    SAMPLE* responsechannel1 = new SAMPLE[gsize/2];
+    SAMPLE* responsechannel2 = new SAMPLE[gsize/2];
     
     for(int i = 0; i < fsize/2; i++){
         sourcechannel1[i] = source[i*2];
