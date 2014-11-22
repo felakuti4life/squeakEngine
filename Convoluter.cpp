@@ -72,7 +72,7 @@ void convolve_fft( SAMPLE * f, int fsize, SAMPLE * g, int gsize, SAMPLE * buffy,
     memcpy( buffy, result, sizeof(SAMPLE) * size );
 }
 
-float* Convoluter::convolveSteroSourceWithStereoSpace(float *source, int sSize, float *response, int rSize){
+float* Convoluter::convolveSteroSourceWithStereoSpace(float * source, int sSize, float * response, int rSize){
     //int samplesize = sizeof(SAMPLE);
     
     int fsize = sSize;

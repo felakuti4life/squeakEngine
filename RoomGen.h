@@ -30,7 +30,7 @@ class RoomGen : public AudioGen {
     
 public:
     typedef AudioGen super;
-    //MARL: init functions
+    //MARK: init functions
     RoomGen(string impulse_fpath /*Vector3D c*/);
     RoomGen(string impulse_fpath, vector<AudioGen*> sourceList);
     
