@@ -17,7 +17,10 @@ class BackgroundGen : public SoundSourceGen {
     
     
 public:
-    
+    typedef SoundSourceGen super;
+    BackgroundGen();
+    BackgroundGen(string fpath);
+    bool synthesize2(float *input, float *output, int numframes);
 };
 
 #endif /* defined(__SqueakEngine__BackgroundGen__) */

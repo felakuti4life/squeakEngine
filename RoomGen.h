@@ -17,6 +17,7 @@ using namespace std;
 #include "AudioGen.h"
 #include "AudioFileHandler.h"
 #include "Convoluter.h"
+#include "BackgroundGen.h"
 
 //ROOM GEN: Impulse creator
 class RoomGen : public AudioGen {
@@ -24,6 +25,8 @@ class RoomGen : public AudioGen {
     SAMPLE* impulse;
     AudioFileHandler filer;
     Convoluter convolver;
+    BackgroundGen ambience;
+    
     int size, srate, channels, playhead;
     bool alreadyConvolved;
     //Vector3D color;
@@ -33,7 +36,8 @@ public:
     //MARK: init functions
     RoomGen(string impulse_fpath /*Vector3D c*/);
     RoomGen(string impulse_fpath, vector<AudioGen*> sourceList);
-    
+    RoomGen(string impulse_fpath, vector<AudioGen*> sourceList, BackgroundGen amb);
+    RoomGen(string impulse_fpath, string ambience_fpath, vector<AudioGen*> sourceList);
     void rewind();
     void prepareConvolvedAudio();
     SAMPLE* getSoundInRoom(SAMPLE* s, int sSize, int *tSize);

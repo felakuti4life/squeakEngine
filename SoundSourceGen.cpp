@@ -8,6 +8,9 @@
 
 #include "SoundSourceGen.h"
 
+SoundSourceGen::SoundSourceGen(){
+    
+}
 
 SoundSourceGen::SoundSourceGen(string fpath){
     super::AudioGen();
@@ -44,7 +47,7 @@ bool SoundSourceGen::synthesize2(float *input, float *output, int numframes){
     super::synthesize2(input, output, numframes);
     for (int i = 0; i < numframes; i++) {
         if (playhead >= size*channels) {
-            rewind();
+            //rewind();
             return false;
         }
         output[i*2] = super::getSound()[(int)playhead*2];

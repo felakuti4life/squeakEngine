@@ -21,6 +21,7 @@ class SoundSourceGen : public AudioGen{
     
 public:
     typedef AudioGen super;
+    SoundSourceGen();
     SoundSourceGen(string fpath);
     void loadSound(string fpath);
     void rewind(int pos = 0);
