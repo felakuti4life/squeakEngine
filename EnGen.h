@@ -15,15 +15,18 @@
 #include <vector>
 
 class EnGen : AudioGen {
-    bool isPlaying;
-    
+    bool isOn, isCurrentlyPlayingSound;
     //current gens
     vector<SoundSourceGen> ObjectsInRoom;
     RoomGen currentRoom;
     
 public:
+    void setObjectsInRoom(vector<SoundSourceGen> v);
+    void setCurrentRoom(RoomGen r);
+    
     void start();
     void stop();
+    void playSound(int index);
     bool synthesize2(float *input, float *output, int numframes);
 };
 

@@ -13,6 +13,8 @@
 		AA0060B31A19A1A30023691A /* AudioGen.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060B11A19A1A30023691A /* AudioGen.h */; };
 		AA0060C21A19D7FA0023691A /* BackgroundGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA0060C01A19D7FA0023691A /* BackgroundGen.cpp */; };
 		AA0060C31A19D7FA0023691A /* BackgroundGen.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0060C11A19D7FA0023691A /* BackgroundGen.h */; };
+		AA66BBD11A21874700C6D442 /* EnGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA66BBCF1A21874700C6D442 /* EnGen.cpp */; };
+		AA66BBD21A21874700C6D442 /* EnGen.h in Headers */ = {isa = PBXBuildFile; fileRef = AA66BBD01A21874700C6D442 /* EnGen.h */; };
 		AAD2FFAE1A141B89002C6B76 /* Convoluter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFAC1A141B89002C6B76 /* Convoluter.cpp */; };
 		AAD2FFAF1A141B89002C6B76 /* Convoluter.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD2FFAD1A141B89002C6B76 /* Convoluter.h */; };
 		AAD2FFB21A141BF0002C6B76 /* chuck_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = AAD2FFB01A141BF0002C6B76 /* chuck_fft.c */; };
@@ -42,6 +44,8 @@
 		AA0060B11A19A1A30023691A /* AudioGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioGen.h; sourceTree = "<group>"; };
 		AA0060C01A19D7FA0023691A /* BackgroundGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BackgroundGen.cpp; sourceTree = "<group>"; };
 		AA0060C11A19D7FA0023691A /* BackgroundGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundGen.h; sourceTree = "<group>"; };
+		AA66BBCF1A21874700C6D442 /* EnGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnGen.cpp; sourceTree = "<group>"; };
+		AA66BBD01A21874700C6D442 /* EnGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnGen.h; sourceTree = "<group>"; };
 		AAD2FFA51A141B4D002C6B76 /* libSqueakEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSqueakEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD2FFAC1A141B89002C6B76 /* Convoluter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Convoluter.cpp; sourceTree = "<group>"; };
 		AAD2FFAD1A141B89002C6B76 /* Convoluter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Convoluter.h; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				AAD2FFB81A141F53002C6B76 /* SoundSourceGen.cpp */,
 				AA0060B01A19A1A30023691A /* AudioGen.cpp */,
 				AA0060B11A19A1A30023691A /* AudioGen.h */,
+				AA66BBCF1A21874700C6D442 /* EnGen.cpp */,
+				AA66BBD01A21874700C6D442 /* EnGen.h */,
 				AA0060C01A19D7FA0023691A /* BackgroundGen.cpp */,
 				AA0060C11A19D7FA0023691A /* BackgroundGen.h */,
 				AAD2FFA61A141B4D002C6B76 /* Products */,
@@ -149,6 +155,7 @@
 				AAD2FFF31A142A11002C6B76 /* RtError.h in Headers */,
 				AAD2FFBB1A141F53002C6B76 /* SoundSourceGen.h in Headers */,
 				AAD2FFF21A142A11002C6B76 /* RtAudio.h in Headers */,
+				AA66BBD21A21874700C6D442 /* EnGen.h in Headers */,
 				AAD2FFF51A142A11002C6B76 /* Delay.h in Headers */,
 				AAD2FFAF1A141B89002C6B76 /* Convoluter.h in Headers */,
 				AAD2FFFA1A142A11002C6B76 /* MidiFileIn.h in Headers */,
@@ -220,6 +227,7 @@
 				AAD2FFAE1A141B89002C6B76 /* Convoluter.cpp in Sources */,
 				AAD2FFFB1A142A11002C6B76 /* Stk.cpp in Sources */,
 				AAD2FFBA1A141F53002C6B76 /* SoundSourceGen.cpp in Sources */,
+				AA66BBD11A21874700C6D442 /* EnGen.cpp in Sources */,
 				AAD2FFF61A142A11002C6B76 /* DelayL.cpp in Sources */,
 				AAD2FFB21A141BF0002C6B76 /* chuck_fft.c in Sources */,
 				AAD2FFF11A142A11002C6B76 /* RtAudio.cpp in Sources */,
