@@ -72,6 +72,20 @@ void convolve_fft( SAMPLE * f, int fsize, SAMPLE * g, int gsize, SAMPLE * buffy,
     memcpy( buffy, result, sizeof(SAMPLE) * size );
 }
 
+// normalize
+void normalize( SAMPLE * buffy, int size, SAMPLE scale = 1.0f )
+{
+    SAMPLE max = 0;
+    
+    // loop over the signal
+    for( int i = 0; i < size; i++ )
+        if( fabs(buffy[i]) > max )
+            max = fabs( buffy[i] );
+    
+    for( int i = 0; i < size; i++ )
+        buffy[i] = (buffy[i] / max) * scale;
+}
+
 float* Convoluter::convolveSteroSourceWithStereoSpace(float * source, int sSize, float * response, int rSize){
     //int samplesize = sizeof(SAMPLE);
     
@@ -104,6 +118,8 @@ float* Convoluter::convolveSteroSourceWithStereoSpace(float * source, int sSize,
         buffer[i*2] = bufferchannel1[i];
         buffer[i*2+1] = bufferchannel2[i];
     }
+    
+    normalize(buffer, size);
     return buffer;
     
     

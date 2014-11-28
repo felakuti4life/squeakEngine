@@ -30,6 +30,8 @@ public:
     void setPlaybackRate(float f);
     float getPlaybackRate();
     
+    void setSize(int s);
+    
     int getSize();
     int getSRate();
     int getChannels();
