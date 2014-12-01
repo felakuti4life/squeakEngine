@@ -20,17 +20,6 @@ RoomGen::RoomGen(string impulse_fpath, vector<AudioGen*> sourceList){
     
 }
 
-RoomGen::RoomGen(string impulse_fpath, vector<AudioGen*> sourceList, BackgroundGen amb){
-    impulse = filer.readFile(impulse_fpath, &channels, &size, &srate);
-    sources = sourceList;
-    ambience = amb;
-}
-
-RoomGen::RoomGen(string impulse_fpath, string ambience_fpath, vector<AudioGen*> sourceList){
-    impulse = filer.readFile(impulse_fpath, &channels, &size, &srate);
-    sources = sourceList;
-    ambience = BackgroundGen(ambience_fpath);
-}
 
 void RoomGen::rewind(){
     playhead = 0;

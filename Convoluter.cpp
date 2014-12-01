@@ -109,11 +109,11 @@ float* Convoluter::convolveSteroSourceWithStereoSpace(float * source, int sSize,
     SAMPLE * bufferchannel1 = new SAMPLE[size/2];
     SAMPLE * bufferchannel2 = new SAMPLE[size/2];
     SAMPLE * buffer = new SAMPLE[size];
-    cout << "left channel..." << endl;
+    //cout << "left channel..." << endl;
     convolve_fft(sourcechannel1, fsize/2, responsechannel1, gsize/2, bufferchannel1, size/2);
-    cout << "right channel..." << endl;
+    //cout << "right channel..." << endl;
     convolve_fft(sourcechannel2, fsize/2, responsechannel2, gsize/2, bufferchannel2, size/2);
-    cout << "joining..." << endl;
+    //cout << "joining..." << endl;
     for (int i = 0; i < size/2; i++) {
         buffer[i*2] = bufferchannel1[i];
         buffer[i*2+1] = bufferchannel2[i];

@@ -17,8 +17,8 @@ SoundSourceGen::SoundSourceGen(string fpath){
     float* s = filer.readFile(fpath, &channels, &size, &srate);
     super::setSound(s);
     this->fpath = fpath;
-    //playbackRate = 1;
-    cout << "loading" << fpath << ":\n" << "channels: " << channels << " size: " << size << " srate: " << srate << endl;
+    playbackRate = 1;
+    //cout << "loading" << fpath << ":\n" << "channels: " << channels << " size: " << size << " srate: " << srate << endl;
 }
 
 
