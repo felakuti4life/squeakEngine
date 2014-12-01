@@ -27,8 +27,7 @@ void RoomGen::rewind(){
 void RoomGen::prepareConvolvedAudio(){
     AudioGen source = *super::getChain().back();
     int sSize = getSize();
-    SAMPLE* sourceSound = source.getSound();
-    SAMPLE* convolved = convolver.convolveSteroSourceWithStereoSpace(sourceSound, sSize, impulse, size);
+    SAMPLE* convolved = convolver.convolveSteroSourceWithStereoSpace(source.getSound(), sSize, impulse, size);
     size += sSize;
     super::setSound(convolved);
     alreadyConvolved = true;

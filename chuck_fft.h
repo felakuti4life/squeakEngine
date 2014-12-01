@@ -28,7 +28,9 @@ typedef struct { float re ; float im ; } complex;
 #endif
 
 // make the window
-void make_window( float * window, unsigned long length );
+void hanning(float *window, unsigned long length);
+void hamming(float *window, unsigned long length);
+void blackman(float *window, unsigned long length);
 // apply the window
 void apply_window( float * data, float * window, unsigned long length );
 

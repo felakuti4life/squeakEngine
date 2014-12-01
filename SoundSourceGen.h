@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include <string>
 #include <math.h>
-//#include "x-vector3d.h"
 #include "AudioFileHandler.h"
 #include "AudioGen.h"
 
@@ -41,7 +40,6 @@ public:
 protected:
     AudioFileHandler filer;
     string fpath;
-    //Vector3D* visualDimensions;
     float playhead;
     int size, srate, channels;
     float playbackRate = 1;

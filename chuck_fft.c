@@ -15,20 +15,54 @@
 
 
 //-----------------------------------------------------------------------------
-// name: make_window()
+// name: hanning()
 // desc: make window
 //-----------------------------------------------------------------------------
-void make_window( float * window, unsigned long length )
-{
+void hanning(float *window, unsigned long length) {
     unsigned long i;
     double pi, phase = 0, delta;
-
-    pi = 4.*atan(1.0);
+    
+    pi = 4. * atan(1.0);
     delta = 2 * pi / (double) length;
+    
+    for (i = 0; i < length; i++) {
+        window[i] = (float) (0.5 * (1.0 - cos(phase)));
+        phase += delta;
+    }
+}
 
-    for( i = 0; i < length; i++ )
-    {
-        window[i] = (float)(0.5 * (1.0 - cos(phase)));
+
+//-----------------------------------------------------------------------------
+// name: hamming()
+// desc: make window
+//-----------------------------------------------------------------------------
+void hamming(float *window, unsigned long length) {
+    unsigned long i;
+    double pi, phase = 0, delta;
+    
+    pi = 4. * atan(1.0);
+    delta = 2 * pi / (double) length;
+    
+    for (i = 0; i < length; i++) {
+        window[i] = (float) (0.54 - .46 * cos(phase));
+        phase += delta;
+    }
+}
+
+
+//-----------------------------------------------------------------------------
+// name: blackman()
+// desc: make window
+//-----------------------------------------------------------------------------
+void blackman(float *window, unsigned long length) {
+    unsigned long i;
+    double pi, phase = 0, delta;
+    
+    pi = 4. * atan(1.0);
+    delta = 2 * pi / (double) length;
+    
+    for (i = 0; i < length; i++) {
+        window[i] = (float) (0.42 - .5 * cos(phase) + .08 * cos(2 * phase));
         phase += delta;
     }
 }

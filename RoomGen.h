@@ -10,7 +10,6 @@
 #define __SqueakEngine__Room__
 
 #include <stdio.h>
-//#include "x-vector3d.h"
 #include <vector>
 #include <string>
 using namespace std;
@@ -27,7 +26,6 @@ class RoomGen : public AudioGen {
     
     int size, srate, channels, playhead;
     bool alreadyConvolved;
-    //Vector3D color;
     
 public:
     typedef AudioGen super;
