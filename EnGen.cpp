@@ -11,6 +11,8 @@
 EnGen::EnGen(){
     isCurrentlyPlayingSound = false;
     isCurrentlyPlayingAmbience = false;
+    soundRate = 1.0;
+    ambRate = 1.0;
 }
 
 void EnGen::setCurrentSound(SoundSourceGen s){
@@ -27,7 +29,6 @@ void EnGen::setCurrentAmbience(BackgroundGen bgnd){
     //FIXME: this might be an inheritence issue
     ambienceSize = bgnd.getSize();
     ambientSound = bgnd.getSound();
-    cout << "Ambience size: " << ambienceSize << endl;
     isCurrentlyPlayingAmbience = true;
 }
 
@@ -35,6 +36,14 @@ void EnGen::setCurrentAmbience(float *snd, int size){
     ambienceSize = size;
     ambientSound = snd;
     isCurrentlyPlayingAmbience = true;
+}
+
+void EnGen::setSoundPlayback(float f){
+    soundRate = f;
+}
+
+void EnGen::setAmbPlayback(float f){
+    ambRate = f;
 }
 
 void EnGen::stopPlayingAmbience(){
@@ -62,10 +71,10 @@ bool EnGen::synthesize2(float *input, float *output, int numframes){
             if (ambiencePlayhead >= ambienceSize)
                 ambiencePlayhead = 0;
         
-        output[i*2] = (currentSound[soundPlayhead*2] + ambientSound[ambiencePlayhead*2]);
-        output[i*2+1] =currentSound[soundPlayhead*2+1] + ambientSound[ambiencePlayhead*2+1];
-        soundPlayhead++;
-        ambiencePlayhead++;
+        output[i*2] = (currentSound[(int)soundPlayhead*2] + ambientSound[(int)ambiencePlayhead*2]);
+        output[i*2+1] =currentSound[(int)soundPlayhead*2+1] + ambientSound[(int)ambiencePlayhead*2+1];
+        soundPlayhead+= soundRate;
+        ambiencePlayhead+= ambRate;
             }
         }
     //ambience, no sound
@@ -75,9 +84,9 @@ bool EnGen::synthesize2(float *input, float *output, int numframes){
                 ambiencePlayhead = 0;
             }
             
-            output[i*2] = ambientSound[ambiencePlayhead*2];
-            output[i*2+1] =ambientSound[ambiencePlayhead*2+1];
-            ambiencePlayhead++;
+            output[i*2] = ambientSound[(int)ambiencePlayhead*2];
+            output[i*2+1] =ambientSound[(int)ambiencePlayhead*2+1];
+            ambiencePlayhead+= ambRate;
         }
     }
     //sound, no ambience
@@ -87,9 +96,9 @@ bool EnGen::synthesize2(float *input, float *output, int numframes){
                 isCurrentlyPlayingSound = false;
             }
             else{
-                output[i*2] = currentSound[soundPlayhead*2];
-                output[i*2+1] =currentSound[soundPlayhead*2+1];
-                soundPlayhead++;
+                output[i*2] = currentSound[(int)soundPlayhead*2];
+                output[i*2+1] =currentSound[(int)soundPlayhead*2+1];
+                soundPlayhead+= soundRate;
             }
         }
     }

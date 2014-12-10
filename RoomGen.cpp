@@ -20,7 +20,6 @@ RoomGen::RoomGen(string impulse_fpath, vector<AudioGen*> sourceList){
     
 }
 
-
 void RoomGen::rewind(){
     playhead = 0;
 }
@@ -33,9 +32,17 @@ void RoomGen::prepareConvolvedAudio(){
     alreadyConvolved = true;
 }
 
+float* RoomGen::getImpulse(){
+    return impulse;
+}
+
+int RoomGen::getSize(){
+    return size;
+}
+
 SAMPLE* RoomGen::getSoundInRoom(float *s, int sSize, int* tSize){
     *tSize = sSize + size - 1;
-    return convolver.convolveSteroSourceWithStereoSpace(s, sSize, impulse, size);
+    return convolver.convolveSteroSourceWithStereoSpace(s, sSize*2, impulse, size*2);
 }
 
 bool RoomGen::synthesize2(float *input, float *output, int numframes){
