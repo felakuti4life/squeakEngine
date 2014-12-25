@@ -30,12 +30,14 @@ class RoomGen : public AudioGen {
 public:
     typedef AudioGen super;
     //MARK: init functions
-    RoomGen(string impulse_fpath = "/Users/Ethan/syncbox/SQUEAK/sound/singles/squeak_3.wav" /*Vector3D c*/);
+    RoomGen(string impulse_fpath = "sound/singles/squeak_3.wav" /*Vector3D c*/);
     RoomGen(string impulse_fpath, vector<AudioGen*> sourceList);
     void rewind();
     void prepareConvolvedAudio();
     SAMPLE* getSoundInRoom(SAMPLE* s, int sSize, int *tSize);
     bool synthesize2(float *input, float *output, int numframes);
+    float* getImpulse();
+    int getSize();
 
 };
 

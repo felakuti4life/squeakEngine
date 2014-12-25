@@ -22,7 +22,8 @@ class EnGen : AudioGen {
     vector<SoundSourceGen> ObjectsInRoom;
     float* currentSound;
     float* ambientSound;
-    int soundSize, ambienceSize, soundPlayhead, ambiencePlayhead;
+    int soundSize, ambienceSize;
+    float soundRate, ambRate, soundPlayhead, ambiencePlayhead;
     
 public:
     EnGen();
@@ -30,6 +31,10 @@ public:
     void setCurrentSound(float* snd, int size);
     void setCurrentAmbience(BackgroundGen bgnd);
     void setCurrentAmbience(float* snd, int size);
+    
+    void setSoundPlayback(float f);
+    void setAmbPlayback(float f);
+    
     void stopPlayingAmbience();
     void playCurrentSound();
     void playSound(SoundSourceGen s);
