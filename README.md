@@ -2,8 +2,12 @@ squeakEngine
 ============
 by Ethan Geller and Andrew Forsyth
 
-Engine for audio-driven adventure games
+ver 0.1.1
 
-A WORK OF WARNING
+Engine for audio-driven adventure games. Features basic graph functionality (chaining), FFT convolution, and easy audio file loading.
+
+For an example of a project that uses SqueakEngine, check out [Squeak](https://github.com/felakuti4life/squeak).
+
+A WORD OF WARNING
 -----------------
-Don't even look at this thing yet, it's a skeleton.
+Documentation is on the way, as soon as a few critical bugs are fixed.
