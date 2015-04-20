@@ -32,7 +32,47 @@ int callback(void *outputBuffer, void *inputBuffer, unsigned int numFrames,
     float *output = (float *) outputBuffer;
     
     engine.synthesize2(input, output, numFrames);
-    memcpy(g_buffer, output, numFrames*2);
     return 0;
 }
 ```
+
+Playing Sounds
+----------------
+
+There are several types of unit generators included out of the box with Squeak Engine. To create a basic sound, use the `SoundSourceGen`:
+
+```
+SoundSourceGen DoorOpen = SoundSourceGen("sound/singles/door_open.wav");
+
+//play sound once
+engine.playSound(DoorClose);
+```
+
+Playing Background Music/Ambience
+---------------------------------
+
+Loading a soundfile into a `BackgroundGen` object will cause it to loop continuously until stopped:
+
+```
+BackgroundGen introMusic = BackgroundGen("sound/ambient/theme.wav");
+
+//play music
+//set up background music
+engine.setCurrentAmbience(introMusic);
+```
+
+Playing a sound in a room (Convolution Reverb)
+---------------------------------------------
+
+Loading a .wav file of an impulse response into a `RoomGen` will allow you to convolve a sound with that room:
+
+```
+int doorClosetSize;
+RoomGen heavenRoom = RoomGen("sound/impulses/heaven.wav");
+
+float* doorCloseSound = heavenRoom.getSoundInRoom(dryDoorClose.getSound(), DoorClose.getSize(), &doorCloseSize);
+DoorClose.setSound(doorCloseSound);
+DoorClose.setSize(doorClosetSize/2);
+```
+
+This is not very elegant, though. It's a work in progress :)
