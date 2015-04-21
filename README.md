@@ -76,3 +76,11 @@ DoorClose.setSize(doorClosetSize/2);
 ```
 
 This is not very elegant, though. It's a work in progress :)
+
+Make your own unit generators!
+------------------------------
+To make your own unit generators in SqueakEngine, subclass the `AudioGen`. You can do all your processing by overriding the `synthesize2` method:
+
+```
+virtual bool synthesize2(float* input, float* output, int numframes);
+```
